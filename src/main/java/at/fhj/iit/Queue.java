@@ -17,7 +17,7 @@ import java.util.NoSuchElementException;
         private List<String> elements = new ArrayList<String>();
         private int maxSize = 5;
 
-        public StringQueue(int maxsize) {
+        public Queue(int maxsize) {
             maxSize = maxSize;
         }
 
@@ -73,4 +73,4 @@ import java.util.NoSuchElementException;
         }
 
     }
-}
+
