@@ -27,7 +27,7 @@ class StringQueueTest {
      */
     @Test
     @DisplayName("Testing StringQueue offer method with new String Object")
-    public void testStringQueueOffer() {
+    public void testQueueOffer() {
         assertTrue(q.offer("b"));
        
     }
@@ -36,7 +36,7 @@ class StringQueueTest {
      */
     @Test
     @DisplayName("Testing StringQueue peek method")
-    public void testStringQueuePoll() {
+    public void testQueuePeek() {
         assertEquals("a", q.peek());
 
     }

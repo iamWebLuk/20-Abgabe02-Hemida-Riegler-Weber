@@ -19,7 +19,7 @@ public class StringQueue implements IQueue {
 
   @Override
   public boolean offer(String obj) {
-    if (elements == null)
+    if (elements.size() != maxSize)
       elements.add(obj);
     else
       return false;
