@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class StringQueueTest {
-    private StringQueue q;
+    private Queue q;
     private List<String> elements = new ArrayList<>();
 
 
@@ -20,16 +20,25 @@ class StringQueueTest {
     @BeforeEach
     void setUp(){
         elements.add("a");
-        q = new StringQueue();
+        q = new Queue(elements,5);
     }
     /**
-     * Tests functionality StringQueue.offer
+     * Tests functionality StringQueue offer
      */
     @Test
-    @DisplayName("Testing StringQueue offer method")
+    @DisplayName("Testing StringQueue offer method with new String Object")
     public void testStringQueueOffer() {
         assertTrue(q.offer("b"));
        
+    }
+    /**
+     * Tests functionality StringQueue.peek
+     */
+    @Test
+    @DisplayName("Testing StringQueue peek method")
+    public void testStringQueuePoll() {
+        assertEquals("a", q.peek());
+
     }
 
 

@@ -4,71 +4,67 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-    public class Queue implements IQueue {
+// there's some Bugs included, try to debug the code and fix the Bugs
+// there are different Bugs, wrong implementation, typos, ...
+// write Test-Cases (read Queue Interface for understanding methods) and use Debugging possibilies of your IDE
 
-/*
- * Author: Lukas Weber,
- *         Islam Hemida,
- *         David Riegler
- *
- * Version: 1.1
- */
+public class Queue implements IQueue {
 
-        private List<String> elements = new ArrayList<String>();
-        private int maxSize = 5;
+    private List<String> elements;
+    private int maxSize;
 
-        public Queue(int maxsize) {
-        }
-
-        @Override
-        public boolean offer(String obj) {
-            if (elements.size() != maxSize)
-                elements.add(obj);
-            else
-                return false;
-
-            return true;
-        }
-
-        @Override
-        public String poll() {
-            String element = peek();
-
-            if (elements.size() == 0) {
-                elements.remove(0);
-            }
-
-            return element;
-        }
-
-        @Override
-        public String remove() {
-            String element = poll();
-            if (element == null)
-                throw new NoSuchElementException("there's no element any more");
-
-            return element;
-        }
-
-        @Override
-        public String peek() {
-            String element;
-            if (elements.size() > 0)
-                element = elements.get(0);
-            else
-                element = null;
-
-            return element;
-        }
-
-        @Override
-        public String element() {
-            String element = peek();
-            if (element == null)
-                throw new NoSuchElementException("there's no element any more");
-
-            return element;
-        }
-
+    public Queue(List<String> elements, int maxSize) {
+        this.elements = elements;
+        this.maxSize = maxSize;
     }
 
+    @Override
+    public boolean offer(String obj) {
+        if (elements.size() != maxSize)
+            elements.add(obj);
+        else
+            return false;
+
+        return true;
+    }
+
+    @Override
+    public String poll() {
+        String element = peek();
+        if (elements.size() == 0) {
+            elements.remove(0);
+        }
+
+        return element;
+    }
+
+    @Override
+    public String remove() {
+        String element = poll();
+        if (element == null)
+            throw new NoSuchElementException("there's no element any more");
+
+        return element;
+    }
+
+    @Override
+    public String peek() {
+        String element;
+        if (elements.size() > 0)
+            element = elements.get(0);
+        else
+            element = null;
+
+        return element;
+    }
+
+    @Override
+    public String element() {
+        String element = peek();
+        if (element == null)
+            throw new NoSuchElementException("there's no element any more");
+
+        return element;
+    }
+
+}
