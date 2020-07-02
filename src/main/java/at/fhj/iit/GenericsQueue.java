@@ -1,16 +1,17 @@
 package at.fhj.iit;
 
-import java.security.Key;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Objects;
 
 // there's some Bugs included, try to debug the code and fix the Bugs
 // there are different Bugs, wrong implementation, typos, ...
 // write Test-Cases (read Queue Interface for understanding methods) and use Debugging possibilies of your IDE
 
-public class GenericsQueue {
+/**
+ * This class works exactly the same as StringQueue, only it can run with all Generics
+ */
+
+public class GenericsQueue implements IQueue {
 
     private List<Object> elements;
     private int maxSize;
@@ -20,7 +21,7 @@ public class GenericsQueue {
         this.maxSize = maxSize;
     }
 
-
+    @Override
     public boolean offer(Object obj) {
         if (elements.size() < maxSize) {
             elements.add(obj);
@@ -29,7 +30,7 @@ public class GenericsQueue {
             return false;
     }
 
-
+    @Override
     public Object poll() {
         Object element = peek();
         if (element != null) {
@@ -38,7 +39,7 @@ public class GenericsQueue {
         return element;
     }
 
-
+    @Override
     public Object remove() {
         Object element = poll();
         if (element == null)
@@ -46,7 +47,7 @@ public class GenericsQueue {
         return element;
     }
 
-
+    @Override
     public Object peek() {
         Object element = null;
         if (elements.size() > 0)
@@ -54,7 +55,7 @@ public class GenericsQueue {
         return element;
     }
 
-
+    @Override
     public Object element() {
         Object element = peek();
         if (element == null)
