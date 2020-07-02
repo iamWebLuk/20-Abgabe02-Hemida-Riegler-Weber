@@ -54,7 +54,6 @@ public class GenericsQueue implements IQueue {
             element = elements.get(0);
         else
             element = null;
-
         return element;
     }
 
