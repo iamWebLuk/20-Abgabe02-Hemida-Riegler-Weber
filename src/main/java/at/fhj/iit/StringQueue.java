@@ -1,6 +1,5 @@
 package at.fhj.iit;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -8,7 +7,7 @@ import java.util.NoSuchElementException;
 // there are different Bugs, wrong implementation, typos, ...
 // write Test-Cases (read Queue Interface for understanding methods) and use Debugging possibilies of your IDE
 
-public class StringQueue implements IQueue {
+public class StringQueue implements IQueue<String> {
 
     private List<String> elements;
     private int maxSize;
