@@ -23,7 +23,7 @@ class GenericsQueueTest {
     void setUp() {
         elements.add("a");
         q = new GenericsQueue(elements, 1);
-        elements1.add("c");
+        elements1.add(2);
         elements1.add("a");
         q1 = new GenericsQueue(elements1, 5);
     }
@@ -66,7 +66,7 @@ class GenericsQueueTest {
     @DisplayName("Testing StringQueue remove method")
     void testStringQueueRemove() {
         assertEquals("a", q.remove());
-        assertEquals("c", q1.remove());
+        assertEquals(2, q1.remove());
     }
 
     /**
