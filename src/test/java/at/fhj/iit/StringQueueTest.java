@@ -22,21 +22,20 @@ class StringQueueTest {
     @BeforeEach
     void setUp() {
         elements.add("a");
-        q1 = new StringQueue(elements, 1);
+        q = new StringQueue(elements, 1);
         elements1.add("c");
         elements1.add("a");
-        q = new StringQueue(elements1, 5);
+        q1 = new StringQueue(elements1, 5);
     }
 
     /**
      * Tests functionality StringQueue offer by offering a String, if maxSize is reached return false
      */
     @Test
-    @DisplayName("Testing StringQueue offer method with new String Object")
-    public void testStringQueueOffer() {
-        assertTrue(q.offer("b"));
-        assertFalse(q1.offer("b"));
-
+    @DisplayName("Testing StringQueue offer method")
+    void testStringQueueOffer() {
+        assertTrue(q1.offer("b"));
+        assertFalse(q.offer("b"));
     }
 
     /**
@@ -44,10 +43,10 @@ class StringQueueTest {
      */
     @Test
     @DisplayName("Testing StringQueue peek method")
-    public void testStringQueuePeek() {
-        assertEquals("a", q1.peek());
-        assertEquals("a", q1.poll());
-        assertNull(q1.peek());
+    void testStringQueuePeek() {
+        assertEquals("a", q.peek());
+        assertEquals("a", q.poll());
+        assertNull(q.peek());
     }
 
     /**
@@ -55,9 +54,9 @@ class StringQueueTest {
      */
     @Test
     @DisplayName("Testing StringQueue poll method")
-    public void testStringQueuePoll() {
-        assertEquals("a", q1.poll());
-        assertNull(q1.poll());
+    void testStringQueuePoll() {
+        assertEquals("a", q.poll());
+        assertNull(q.poll());
     }
 
     /**
@@ -65,9 +64,9 @@ class StringQueueTest {
      */
     @Test
     @DisplayName("Testing StringQueue remove method")
-    public void testStringQueueRemove() {
-        assertEquals("a", q1.remove());
-        assertEquals("c", q.remove());
+    void testStringQueueRemove() {
+        assertEquals("a", q.remove());
+        assertEquals("c", q1.remove());
     }
 
     /**
@@ -75,16 +74,33 @@ class StringQueueTest {
      */
     @Test
     @DisplayName("Testing StringQueue NoSuchElementException in remove method")
-    public void whenExceptionThrown_thenAssertionSucceeds() {
-        q1.remove();
-        Exception exception = assertThrows(NoSuchElementException.class, () -> {
-            q1.remove();
-        });
+    void ExceptionThrown_thenAssertionSucceeds_Remove() {
+        q.remove();
+        Exception exception = assertThrows(NoSuchElementException.class, () -> q.remove());
         String expectedMessage = "there's no element any more";
         String actualMessage = exception.getMessage();
         assertTrue(actualMessage.contains(expectedMessage));
     }
 
+    /**
+     * Tests functionality of element method (basically same as peek method)
+     */
+    @Test
+    @DisplayName("Testing StringQueue element method")
+    void testStringQueueElement() {
+        assertEquals("a", q.element());
+    }
 
-
+    /**
+     * Tests if exception is thrown when element in StringQueue has no element (remove element in q with poll function)
+     */
+    @Test
+    @DisplayName("Testing StringQueue NoSuchElementException in element method")
+    void ExceptionThrown_thenAssertionSucceeds_Element() {
+        q.poll();
+        Exception exception = assertThrows(NoSuchElementException.class, () -> q.element());
+        String expectedMessage = "there's no element any more";
+        String actualMessage = exception.getMessage();
+        assertTrue(actualMessage.contains(expectedMessage));
+    }
 }

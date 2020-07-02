@@ -20,21 +20,19 @@ public class GenericsQueue implements IQueue {
 
     @Override
     public boolean offer(String obj) {
-        if (elements.size() != maxSize)
+        if (elements.size() < maxSize) {
             elements.add(obj);
-        else
+            return true;
+        } else
             return false;
-
-        return true;
     }
 
     @Override
     public String poll() {
         String element = peek();
-        if (elements.size() == 0) {
+        if (element != null) {
             elements.remove(0);
         }
-
         return element;
     }
 
@@ -43,17 +41,14 @@ public class GenericsQueue implements IQueue {
         String element = poll();
         if (element == null)
             throw new NoSuchElementException("there's no element any more");
-
         return element;
     }
 
     @Override
     public String peek() {
-        String element;
+        String element = null;
         if (elements.size() > 0)
             element = elements.get(0);
-        else
-            element = null;
         return element;
     }
 
@@ -62,7 +57,6 @@ public class GenericsQueue implements IQueue {
         String element = peek();
         if (element == null)
             throw new NoSuchElementException("there's no element any more");
-
         return element;
     }
 
