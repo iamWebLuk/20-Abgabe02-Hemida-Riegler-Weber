@@ -9,34 +9,44 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-class StringQueueTest {
-    private Queue q;
+class GenericsQueueTest {
+    private GenericsQueue q;
     private List<String> elements = new ArrayList<>();
 
 
     /**
-     * Inits a StringQueue
+     * Inits a Queue
      */
     @BeforeEach
     void setUp(){
         elements.add("a");
-        q = new Queue(elements,5);
+        q = new GenericsQueue(elements,5);
     }
     /**
-     * Tests functionality StringQueue offer
+     * Tests functionality Queue offer
      */
     @Test
     @DisplayName("Testing StringQueue offer method with new String Object")
     public void testQueueOffer() {
         assertTrue(q.offer("b"));
-       
+
     }
     /**
-     * Tests functionality StringQueue.peek
+     * Tests functionality Queue peek
      */
     @Test
     @DisplayName("Testing StringQueue peek method")
     public void testQueuePeek() {
+        assertEquals("a", q.peek());
+
+    }
+
+    /**
+     * Tests functionality Queue poll
+     */
+    @Test
+    @DisplayName("Testing StringQueue poll method")
+    public void testQueuePoll() {
         assertEquals("a", q.peek());
 
     }
