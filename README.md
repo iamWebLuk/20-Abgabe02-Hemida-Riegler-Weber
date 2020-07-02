@@ -9,7 +9,9 @@
 -Project Team:
 
 [Islam Hemida](https://github.com/Islam-Hemida)
+
 [David Riegler](https://github.com/RegalFenster)
+
 [Lukas Weber](https://github.com/iamWebLuk)
 
 ##Build Automation with Maven##
@@ -24,6 +26,11 @@ We got already a quite finished project with a few bugs. Our task now is, to wri
 The following points are the task list we have to make.
 
 -[x] Create a ReadMe file
+
 -[x] Create a task list in the ReadMe file
--[x] Write tests for bug finding in the template
--[x] Fix these bugs
+
+-[x] Find bugs in the template and fix them
+
+-[x] Write test cases
+
+-[x] Make another class with objects instead of strings
