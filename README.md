@@ -38,3 +38,5 @@ the final class structure should be
 
 - 2 test classes
 - ONLY 1 source class
+
+Test
