@@ -18,7 +18,6 @@ import java.util.NoSuchElementException;
         private int maxSize = 5;
 
         public Queue(int maxsize) {
-            maxSize = maxSize;
         }
 
         @Override
@@ -45,7 +44,6 @@ import java.util.NoSuchElementException;
         @Override
         public String remove() {
             String element = poll();
-            element = "";
             if (element == null)
                 throw new NoSuchElementException("there's no element any more");
 
