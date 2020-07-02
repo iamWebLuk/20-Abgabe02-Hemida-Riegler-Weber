@@ -1,40 +1,29 @@
 # Software Configuration Management #
 
-**EDUCATION Repository**
+**Assignment 02: Build Automation with Maven**
 
 ## Test Automation with JUnit5 ##
 
 ### Queue Exercise ###
 
-**Basic Exercise:**
+-Project Team:
 
-- implement test methods for StringQueue
-- try to get 100% Test Coverage
+[Islam Hemida](https://github.com/Islam-Hemida)
+[David Riegler](https://github.com/RegalFenster)
+[Lukas Weber](https://github.com/iamWebLuk)
 
-the final class structure should be
+##Build Automation with Maven##
+This assignment aims to teach and introduce us to the work with Maven. It also includes build automation, documentations and structures. To pass this task, we need to make use of the new knowledge we learned in the lectures so far.
 
-- 1 test class
-- 1 source class
+#Queue Exercise#
 
-*Only Basic Exercise necessary for final exercise in summer term 2019*
+We got already a quite finished project with a few bugs. Our task now is, to write an automation test to find these bugs and fix them. The template we used is from our teacher and can be found here: [Exercise with Queues](https://github.com/michaelulm/software-configuration-management/tree/master/test-automation/junit5/Queue)
 
-**Extended Exercise:**
+#Task list#
 
-- create Integer Queue Implementation (new class)
-- implement test methods for IntQueue
-- try to get 100% Test Coverage
+The following points are the task list we have to make.
 
-the final class structure should be
-
-- 2 test classes
-- 2 source classes
-
-**Advanced Exercise:**
-
-- create new Abstract Class with Generics
-- implement both 
-
-the final class structure should be
-
-- 2 test classes
-- ONLY 1 source class
+-[x] Create a ReadMe file
+-[x] Create a task list in the ReadMe file
+-[x] Write tests for bug finding in the template
+-[x] Fix these bugs
