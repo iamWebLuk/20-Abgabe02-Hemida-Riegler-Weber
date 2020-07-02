@@ -1,6 +1,6 @@
 package at.fhj.iit;
 
-public interface IQueue {
+public interface IQueue<Object> {
   /**
    * Adds the element obj to the queue.
    * If the addition is successful, the method returns true else false.
@@ -8,7 +8,7 @@ public interface IQueue {
    * @param obj
    * @return
    */
-  public abstract boolean offer(String obj);
+  public abstract boolean offer(Object obj);
 
   /**
    * Returns the head (first) element and also deletes it. That is, we cannot get it again.
@@ -16,7 +16,7 @@ public interface IQueue {
    *
    * @return
    */
-  public abstract String poll();
+  public abstract Object poll();
 
   /**
    * It also returns and deletes the head element like poll(), but with a small difference.
@@ -24,7 +24,7 @@ public interface IQueue {
    *
    * @return
    */
-  public abstract String remove();
+  public abstract Object remove();
 
   /**
    * Returns the head element but it does not delete it. That is, we can get it again.
@@ -32,7 +32,7 @@ public interface IQueue {
    *
    * @return
    */
-  public abstract String peek();
+  public abstract Object peek();
 
   /**
    * It works similar to peek() but with a small difference (returns but does not delete the element).
@@ -40,5 +40,5 @@ public interface IQueue {
    *
    * @return
    */
-  public abstract String element();
+  public abstract Object element();
 }
