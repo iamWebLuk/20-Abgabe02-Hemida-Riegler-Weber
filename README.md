@@ -6,7 +6,7 @@
 
 ### Queue Exercise ###
 
--Project Team:
+Project Team:
 
 [Islam Hemida](https://github.com/Islam-Hemida)
 
@@ -35,8 +35,8 @@ The following points are the task list we have to make.
 
 - [x] Make another class with objects instead of strings
 
-- []
+- [x] Test the implemented Generics
 
-- []
+- [x] Edit the pom.xml meta infos
 
-- []
+- [] Create the Maven Site Documentation  
