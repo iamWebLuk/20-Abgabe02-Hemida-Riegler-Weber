@@ -9,39 +9,55 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>Queue</name>
-  <url>https://github.com/michaelulm/software-configuration-management/tree/master/test-automation/junit5/Queue</url>
+  <url>https://github.com/iamWebLuk/20Abgabe02-Hemida-Riegler-Weber</url>
 
   <developers>
     <developer>
-      <id>michaelulm</id>
-      <name>Michael Ulm</name>
-      <email>michael.ulm@fh-joanneum.at</email>
-      <url>https://www.michael-ulm.at</url>
+      <id>Islam-Hemida</id>
+      <name>Islam Hemida</name>
+      <email>islam.hemida@fh-joanneum.at</email>
+      <url>https://islam-hemida.github.io/cv/index.html</url>
       <organization>FH JOANNEUM GmbH</organization>
-      <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
       <roles>
-        <role>Lecturer</role>
+        <role>Student</role>
       </roles>
-      <timezone>Europe/Vienna</timezone>
+      <timezone>Europe/Graz</timezone>
       <properties>
-        <picUrl>https://avatars2.githubusercontent.com/u/15637184</picUrl>
+        <picUrl>https://islam-hemida.github.io/cv/assets/img/profile.jpg</picUrl>
       </properties>
     </developer>
-    <developer>
-      <id>Rigbin</id>
-      <name>Harald Schwab</name>
-      <email>harald.schwab2@fh-joanneum.at</email>
-      <url>https://github.com/Rigbin</url>
-      <organization>FH JOANNEUM GmbH</organization>
-      <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
-      <roles>
-        <role>Researcher</role>
-      </roles>
-      <timezone>Europe/Vienna</timezone>
-      <properties/>
-    </developer>
-  </developers>
 
+      <developer>
+        <id>RegalFenster</id>
+        <name>David Riegler</name>
+        <email>david.riegler@fh-joanneum.at</email>
+        <url>https://regalfenster.github.io</url>
+        <organization>FH JOANNEUM GmbH</organization>
+        <roles>
+          <role>Student</role>
+        </roles>
+        <timezone>Europe/Graz</timezone>
+        <properties>
+          <picUrl>https://upload.wikimedia.org/wikipedia/en/e/e0/Felicette%2C_spacecat.jpg</picUrl>
+        </properties>
+      </developer>
+
+        <developer>
+          <id>iamWebLuk</id>
+          <name>Lukas Weber</name>
+          <email>lukas.weber@fh-joanneum.at</email>
+          <url>https://iamwebluk.github.io</url>
+          <organization>FH JOANNEUM GmbH</organization>
+          <roles>
+            <role>Student</role>
+          </roles>
+          <timezone>Europe/Graz</timezone>
+          <properties>
+            <picUrl>https://avatars2.githubusercontent.com/u/62706898?s=400&v=4</picUrl>
+          </properties>
+        </developer>
+</developers>
+  
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.comiler.release>11</maven.comiler.release>
