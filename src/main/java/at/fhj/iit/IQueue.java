@@ -5,8 +5,8 @@ public interface IQueue<Object> {
    * Adds the element obj to the queue.
    * If the addition is successful, the method returns true else false.
    *
-   * @param obj
-   * @return
+   * @param obj descirbe blalbal
+   * @return true if succesfull otherwiser false
    */
   public abstract boolean offer(Object obj);
 

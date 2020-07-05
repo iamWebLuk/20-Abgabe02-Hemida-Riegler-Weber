@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-class GenericsQueueTest {
+public class GenericsQueueTest {
     private GenericsQueue q, q1;
     private List<Object> elements = new ArrayList<>();
     private List<Object> elements1 = new ArrayList<>();

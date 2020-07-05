@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-class StringQueueTest {
+public class StringQueueTest {
     private StringQueue q, q1;
     private List<String> elements = new ArrayList<>();
     private List<String> elements1 = new ArrayList<>();
