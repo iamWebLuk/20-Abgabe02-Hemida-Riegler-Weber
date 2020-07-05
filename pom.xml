@@ -27,36 +27,36 @@
       </properties>
     </developer>
 
-      <developer>
-        <id>RegalFenster</id>
-        <name>David Riegler</name>
-        <email>david.riegler@fh-joanneum.at</email>
-        <url>https://regalfenster.github.io</url>
-        <organization>FH JOANNEUM GmbH</organization>
-        <roles>
-          <role>Student</role>
-        </roles>
-        <timezone>12</timezone>
-        <properties>
-          <picUrl>https://upload.wikimedia.org/wikipedia/en/e/e0/Felicette%2C_spacecat.jpg</picUrl>
-        </properties>
-      </developer>
+    <developer>
+      <id>RegalFenster</id>
+      <name>David Riegler</name>
+      <email>david.riegler@fh-joanneum.at</email>
+      <url>https://regalfenster.github.io</url>
+      <organization>FH JOANNEUM GmbH</organization>
+      <roles>
+        <role>Student</role>
+      </roles>
+      <timezone>12</timezone>
+      <properties>
+        <picUrl>https://upload.wikimedia.org/wikipedia/en/e/e0/Felicette%2C_spacecat.jpg</picUrl>
+      </properties>
+    </developer>
 
-        <developer>
-          <id>iamWebLuk</id>
-          <name>Lukas Weber</name>
-          <email>lukas.weber@fh-joanneum.at</email>
-          <url>https://iamwebluk.github.io</url>
-          <organization>FH JOANNEUM GmbH</organization>
-          <roles>
-            <role>Student</role>
-          </roles>
-          <timezone>12</timezone>
-          <properties>
-            <picUrl>https://avatars2.githubusercontent.com/u/62706898?s=400&amp;v=4</picUrl>
-          </properties>
-        </developer>
-</developers>
+    <developer>
+      <id>iamWebLuk</id>
+      <name>Lukas Weber</name>
+      <email>lukas.weber@fh-joanneum.at</email>
+      <url>https://iamwebluk.github.io</url>
+      <organization>FH JOANNEUM GmbH</organization>
+      <roles>
+        <role>Student</role>
+      </roles>
+      <timezone>12</timezone>
+      <properties>
+        <picUrl>https://avatars2.githubusercontent.com/u/62706898?s=400&amp;v=4</picUrl>
+      </properties>
+    </developer>
+  </developers>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -82,11 +82,7 @@
       <version>5.6.2</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-javadoc-plugin</artifactId>
-      <version>3.2.0</version>
-    </dependency>
+
 
   </dependencies>
 
