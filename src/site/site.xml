@@ -20,6 +20,7 @@
                 <item href="testapidocs/index.html" name="Test Javadoc"/>
             </item>
             <item href="queue.html" name="Queue"/>
+            <item href="queuedetail.html" name="Queue Detail"/>
         </menu>
     </body>
 
