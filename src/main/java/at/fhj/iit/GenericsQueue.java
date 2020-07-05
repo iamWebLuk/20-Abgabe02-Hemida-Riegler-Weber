@@ -16,11 +16,13 @@ public class GenericsQueue implements IQueue {
     private List<Object> elements;
     private int maxSize;
 
+    //Constructor for GenericsQueue
     public GenericsQueue(List<Object> elements, int maxSize) {
         this.elements = elements;
         this.maxSize = maxSize;
     }
 
+    //Adds the element obj to the queue, if
     @Override
     public boolean offer(Object obj) {
         if (elements.size() < maxSize) {
@@ -30,6 +32,7 @@ public class GenericsQueue implements IQueue {
             return false;
     }
 
+    //Returns first element in the queue, and deletes it
     @Override
     public Object poll() {
         Object element = peek();
@@ -39,6 +42,7 @@ public class GenericsQueue implements IQueue {
         return element;
     }
 
+    //deletes first element in queue, also has an Exception
     @Override
     public Object remove() {
         Object element = poll();
@@ -47,6 +51,7 @@ public class GenericsQueue implements IQueue {
         return element;
     }
 
+    //returns first element in queue
     @Override
     public Object peek() {
         Object element = null;
@@ -55,6 +60,7 @@ public class GenericsQueue implements IQueue {
         return element;
     }
 
+    ////returns first element in queue, also has an Exception
     @Override
     public Object element() {
         Object element = peek();
