@@ -39,4 +39,4 @@ The following points are the task list we have to make.
 
 - [x] Edit the pom.xml meta infos
 
-- [] Create the Maven Site Documentation  
+- [x] Create the Maven Site Documentation  
