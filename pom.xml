@@ -21,7 +21,7 @@
       <roles>
         <role>Student</role>
       </roles>
-      <timezone>Europe/Graz</timezone>
+      <timezone>12</timezone>
       <properties>
         <picUrl>https://upload.wikimedia.org/wikipedia/commons/d/de/Bau_einer_pyramide.jpg</picUrl>
       </properties>
@@ -36,7 +36,7 @@
         <roles>
           <role>Student</role>
         </roles>
-        <timezone>Europe/Graz</timezone>
+        <timezone>12</timezone>
         <properties>
           <picUrl>https://upload.wikimedia.org/wikipedia/en/e/e0/Felicette%2C_spacecat.jpg</picUrl>
         </properties>
@@ -51,9 +51,9 @@
           <roles>
             <role>Student</role>
           </roles>
-          <timezone>Europe/Graz</timezone>
+          <timezone>12</timezone>
           <properties>
-            <picUrl>https://avatars2.githubusercontent.com/u/62706898?s=400&v=4</picUrl>
+            <picUrl>https://avatars2.githubusercontent.com/u/62706898?s=400&amp;v=4</picUrl>
           </properties>
         </developer>
 </developers>
@@ -82,10 +82,18 @@
       <version>5.6.2</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-javadoc-plugin</artifactId>
+      <version>3.2.0</version>
+    </dependency>
+
   </dependencies>
 
   <build>
+
     <plugins>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -99,19 +107,40 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.22.1</version>
       </plugin>
-    </plugins>
-  </build>
-
-  <reporting>
-    <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.2.0</version>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.6</version>
+        <executions>
+          <execution>
+            <phase>test</phase>
+            <goals>
+              <goal>resources</goal>
+              <goal>testResources</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>2.7</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>2.5</version>
         <configuration>
-          <show>public</show>
+          <filesets>
+            <fileset>
+              <directory>src/main/generated-groovy-stubs</directory>
+            </fileset>
+          </filesets>
         </configuration>
       </plugin>
     </plugins>
-  </reporting>
+  </build>
+
+
+
 </project>
