@@ -30,6 +30,7 @@ class StringQueueTest {
 
     /**
      * Tests functionality StringQueue offer by offering a String, if maxSize is reached return false
+     * 
      */
     @Test
     @DisplayName("Testing StringQueue offer method")
